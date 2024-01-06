@@ -1,3 +1,36 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "next",
+    "standard",
+    "eslint:recommended",
+    "prettier",
+    "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended"
+  ],
+  "plugins": [
+    "prettier",
+    "tailwindcss"
+  ],
+  "rules": {
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "camelcase": [
+      "error",
+      {
+        "ignoreGlobals": true,
+        "ignoreDestructuring": true,
+        "allow": [
+          "Space_Grotesk", //! tailwindcss
+          "content_style" //! tinymce/tinymce-react'
+        ]
+      }
+    ]
+  }
 }
